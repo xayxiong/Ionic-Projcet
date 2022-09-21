@@ -1,0 +1,7 @@
+{
+  "name": "LockTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
