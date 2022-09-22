@@ -12,6 +12,42 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
+  {{showTime}}
+  <div>{{production}}</div>
+  <ion-input type ="text" style="border:1px solid" 
 
+  [(ngModel)]="production"
+  ></ion-input>
+
+  <ion-button (click)="save()">save</ion-button>
+
+
+  <ion-button (click)="test()"> Test</ion-button>
+
+  <ion-button (click)="test1()"> Test1</ion-button>
+  <ion-button (click)="test2()"> Test2</ion-button>
+  <ion-button (click)="test3()"> Test3</ion-button>
+  <ion-button (click)="test4()"> Test4</ion-button>
+  <div>
+    ==>{{sampleData.userId}}
+    ==>{{sampleData.title}}
+  </div>
+
+
+  <ion-grid>
+    <ion-row>
+     Login
+     <ion-list>
+      <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-input class="input" [(ngModel)]="loginData.username"></ion-input>
+        <ion-label>password</ion-label>
+        <ion-input class="input" type="password" [(ngModel)]="loginData.password"></ion-input>
+        <ion-button (click)="login()">Login</ion-button>
+      </ion-item>
+     </ion-list>
+    </ion-row>
+    
+  </ion-grid>
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
