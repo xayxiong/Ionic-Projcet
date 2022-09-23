@@ -53,22 +53,6 @@ export class Tab1Page {
   }
 
 
-  register(){
-    this.apiService.register(this.loginData).then(r=>{
-      console.log(r);
-      
-    }).catch(e=>{
-      console.log(e);
-      
-    });
-  }
-
-
-
-
-
-
-
 
 
   save(){
