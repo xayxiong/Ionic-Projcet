@@ -79,4 +79,16 @@ export class ApiService {
   setpasskeys(){
 
   }
+
+
+
+
+
+
+  register(login:ILogin){
+    return this.http.post(this.url+'1',login).toPromise();
+  }
+  setpasswork(){
+
+  }
 }

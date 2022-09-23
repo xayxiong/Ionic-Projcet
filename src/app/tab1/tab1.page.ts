@@ -13,6 +13,7 @@ export class Tab1Page {
   showTime = new Date().getTime();
   sampleData:any={};
   loginData={} as ILogin
+  
   constructor(public apiService:ApiService) {}
   test(){
     this.apiService.loadTest();
@@ -50,6 +51,26 @@ export class Tab1Page {
       
     });
   }
+
+
+  register(){
+    this.apiService.register(this.loginData).then(r=>{
+      console.log(r);
+      
+    }).catch(e=>{
+      console.log(e);
+      
+    });
+  }
+
+
+
+
+
+
+
+
+
   save(){
     const production = 'ok ';
     // const x = prompt('saving this value '+this.production);
