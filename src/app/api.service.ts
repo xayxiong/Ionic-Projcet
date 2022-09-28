@@ -90,7 +90,7 @@ export class ApiService {
   username = "+8562077912908"
   password = "bfc6f193a5dbad9f53a37afbddecd81c"
   client_secret = "755b2f580dbb58cbd7bdb8820b7bb706"
-
+// –disable-web-security –disable-gpu –user-data-dir=~/chromeTemp
 
   // clientId=''
   // accessToken=''
@@ -118,30 +118,47 @@ export class ApiService {
     }
     )
   }
-}
+
 // Refresh access token
 
 
-// clientId = "24bd4a0e257a48f1a32b20b52cfbe6db"
-
+// clientId1 = "24bd4a0e257a48f1a32b20b52cfbe6db"
 // clientSecret = "755b2f580dbb58cbd7bdb8820b7bb706"
-// grant_type =" f1611d9a718cb6df1b63dab1870c2cf8"
+// grant_type = "f1611d9a718cb6df1b63dab1870c2cf8"
 // refresh_token = "f1611d9a718cb6df1b63dab1870c2cf8"
-// oauth1()
-//   const url='https://euapi.sciener.com/oauth2/token'
-//   let body = new  URLSearchParams()
-//   body.set('clientId', this.clienrId),
-//   body.set('accessToken', this.clientSecret)
-//   body.set('username', this.username)
-//   body.set('password', this.password)
-//   body.set('client_secret', this.client_secret); 
-//   return this.http.post(url, body, {
-//     headers: new HttpHeaders()
-//       .set('Content-Type', 'application/x-www-form-urlencoded')
-//       // .set('Origin','*')
+//   oauth1() {
+//     const url = 'https://euapi.sciener.com/oauth2/token';
+//     let body = new  URLSearchParams()
+//     body.set('clientId', this.clientId)
+//     body.set('clientSecret', this.clientSecret)
+//     body.set('grant_type', this.grant_type)
+//     body.set('refresh_token', this.refresh_token)
+    
+
+
+//     //  oauth(keyName=string,receiverUsername=string){
+
+//     // }
+//     // body.set('keyName', keyName);
+//     // body.set('receiverUsername', receiverUsername);
+
+//     // body.set('date', new Date().getTime() + '');
+//     return this.http.post(url, body, {
+//       headers: new HttpHeaders()
+//         .set('Content-Type', 'application/x-www-form-urlencoded')
+//         // .set('Origin','*')
+//     }
+//     )
 //   }
 
 
-//   headers: new HttpHeaders()
+
+
+
+
+
+}
+
+
 
 

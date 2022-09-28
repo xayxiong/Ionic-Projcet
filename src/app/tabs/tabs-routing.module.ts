@@ -23,6 +23,18 @@ const routes: Routes = [
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
+      },
+      {
+        path: 'register-screen',
+        loadChildren: () => import('../flutter_style/screen/register-screen/register-screen.module').then( m => m.RegisterScreenPageModule)
+      },
+      {
+        path: 'home-screen',
+        loadChildren: () => import('../flutter_style/screen/home-screen/home-screen.module').then( m => m.HomeScreenPageModule)
+      },
+      {
+        path: 'login-screen',
+        loadChildren: () => import('../flutter_style/screen/login-screen/login-screen.module').then( m => m.LoginScreenPageModule)
       }
     ]
   },

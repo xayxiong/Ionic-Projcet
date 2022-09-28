@@ -1,0 +1,27 @@
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .btn-login {
+        padding: 10px;
+        border-radius: 5px;
+        background:red;
+        color: white;
+        transition: 0.2s;
+    }
+    .btn-login:hover {
+        background: green;
+    }
+
+
+    .btn-register{
+        padding: 10px;
+        border-radius: 5px;
+        background:rgb(6, 245, 229);
+        color: white;
+        transition: 0.2s;
+    }
+    .btn-register:hover {
+        background: rgb(255, 0, 93);
+    }
+}

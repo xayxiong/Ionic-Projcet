@@ -53,20 +53,24 @@ export class Tab1Page {
   }
   oauth(){
     this.apiService.oauth().toPromise().then(r=>{
-
+      const o = r as any;
+      console.log(r);
+      this.apiService.accessToken=o.access_token;
     }).catch(e=>{
       console.log(e);
       
     })
     }
-    oauth1(){
-      this.apiService.oauth().toPromise().then(r=>{
-  
-      }).catch(e=>{
-        console.log(e);
+    // oauth1(){
+    //   this.apiService.oauth().toPromise().then(r=>{
+    //     const o = r as any;
+    //     console.log(r);
+    //     this.apiService.accessToken=o.access_token;
+    //   }).catch(e=>{
+    //     console.log(e);
         
-      })
-      }
+    //   })
+    //   }
 
 
 
