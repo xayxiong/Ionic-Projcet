@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { ILogin } from './model';
 
 @Injectable({
@@ -80,15 +80,68 @@ export class ApiService {
 
   }
 
-  addCustomPasscode(keyboardPwdId: string) {
-    const url = 'https://euapi.sciener.com/v3/keyboardPwd/add';
-    this.http.post(url, {
-      keyboardPwdId
-    }, {
-      headers: {
-        'content-type': 'application/json'
-      }
+
+
+//Page OAuth
+// Get access token
+
+  clientId = "24bd4a0e257a48f1a32b20b52cfbe6db"
+  accessToken = "f1611d9a718cb6df1b63dab1870c2cf8"
+  username = "+8562077912908"
+  password = "bfc6f193a5dbad9f53a37afbddecd81c"
+  client_secret = "755b2f580dbb58cbd7bdb8820b7bb706"
+
+
+  // clientId=''
+  // accessToken=''
+  oauth() {
+    const url = 'https://euapi.sciener.com/oauth2/token';
+    let body = new  URLSearchParams()
+    body.set('clientId', this.clientId)
+    body.set('accessToken', this.accessToken)
+    body.set('username', this.username)
+    body.set('password', this.password)
+    body.set('client_secret', this.client_secret);
+
+
+    //  oauth(keyName=string,receiverUsername=string){
+
+    // }
+    // body.set('keyName', keyName);
+    // body.set('receiverUsername', receiverUsername);
+
+    // body.set('date', new Date().getTime() + '');
+    return this.http.post(url, body, {
+      headers: new HttpHeaders()
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+        // .set('Origin','*')
     }
     )
   }
 }
+// Refresh access token
+
+
+// clientId = "24bd4a0e257a48f1a32b20b52cfbe6db"
+
+// clientSecret = "755b2f580dbb58cbd7bdb8820b7bb706"
+// grant_type =" f1611d9a718cb6df1b63dab1870c2cf8"
+// refresh_token = "f1611d9a718cb6df1b63dab1870c2cf8"
+// oauth1()
+//   const url='https://euapi.sciener.com/oauth2/token'
+//   let body = new  URLSearchParams()
+//   body.set('clientId', this.clienrId),
+//   body.set('accessToken', this.clientSecret)
+//   body.set('username', this.username)
+//   body.set('password', this.password)
+//   body.set('client_secret', this.client_secret); 
+//   return this.http.post(url, body, {
+//     headers: new HttpHeaders()
+//       .set('Content-Type', 'application/x-www-form-urlencoded')
+//       // .set('Origin','*')
+//   }
+
+
+//   headers: new HttpHeaders()
+
+

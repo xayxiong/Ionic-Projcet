@@ -51,7 +51,22 @@ export class Tab1Page {
       
     });
   }
+  oauth(){
+    this.apiService.oauth().toPromise().then(r=>{
 
+    }).catch(e=>{
+      console.log(e);
+      
+    })
+    }
+    oauth1(){
+      this.apiService.oauth().toPromise().then(r=>{
+  
+      }).catch(e=>{
+        console.log(e);
+        
+      })
+      }
 
 
 
@@ -86,3 +101,5 @@ export class Tab1Page {
     }
   }
 }
+
+
