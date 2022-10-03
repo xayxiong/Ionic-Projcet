@@ -51,27 +51,6 @@ export class Tab1Page {
       
     });
   }
-  oauth(){
-    this.apiService.oauth().toPromise().then(r=>{
-      const o = r as any;
-      console.log(r);
-      this.apiService.accessToken=o.access_token;
-    }).catch(e=>{
-      console.log(e);
-      
-    })
-    }
-    // oauth1(){
-    //   this.apiService.oauth().toPromise().then(r=>{
-    //     const o = r as any;
-    //     console.log(r);
-    //     this.apiService.accessToken=o.access_token;
-    //   }).catch(e=>{
-    //     console.log(e);
-        
-    //   })
-    //   }
-
 
 
   save(){
@@ -104,6 +83,173 @@ export class Tab1Page {
       alert('changed has been canceled')
     }
   }
+
+
+
+// OAuth
+  oauth(){
+    this.apiService.oauth().toPromise().then(r=>{
+      const o = r as any;
+      console.log(r);
+      this.apiService.accessToken=o.access_token;
+      // this.apiService.refresh_token=o.refresh_token;
+    }).catch(e=>{
+      console.log(e);
+      
+    }
+    )
+    }
+
+
+    oauth1(){
+      this.apiService.oauth1().toPromise().then(r=>{
+        // const o = r as any;
+        console.log(r);
+        // this.apiService.accessToken=o.access_token;
+      }).catch(e=>{
+        console.log(e);
+        
+      }
+      )
+      }
+    // LockAPI
+
+    Lockinitialize(){
+      this.apiService.Lockinitialize().toPromise().then(r=>{
+        const o = r as any;
+        console.log(r);
+        this.apiService.accessToken=o.access_token;
+        this.apiService.lockId=o.lockId;
+      }).catch(e=>{
+        console.log(e);
+        
+      }
+      )
+      }
+
+      // Get the lock list of an account
+      Getthelocklistofanaccount(){
+      this.apiService.Getthelocklistofanaccount().toPromise().then(r=>{
+        // const o = r as any;
+        console.log(r);
+        // this.apiService.accessToken=o.access_token;
+      }).catch(e=>{
+        console.log(e);
+        
+      }
+      )
+      }
+      // Get lock details
+      Getlockdetails(){
+        this.apiService.Getlockdetails().toPromise().then(r=>{
+          // const o = r as any;
+          console.log(r);
+          // this.apiService.accessToken=o.access_token;
+        }).catch(e=>{
+          console.log(e);
+          
+        }
+        )
+        }
+        // Delete lock
+
+        Deletelock(){
+          this.apiService.Deletelock().toPromise().then(r=>{
+            // const o = r as any;
+            console.log(r);
+            // this.apiService.accessToken=o.access_token;
+          }).catch(e=>{
+            console.log(e);
+            
+          }
+          )
+          }
+          
+          // Updatelockdataresetekey
+          Updatelockdataresetekey(){
+            this.apiService.Updatelockdataresetekey().toPromise().then(r=>{
+              // const o = r as any;
+              console.log(r);
+              // this.apiService.accessToken=o.access_token;
+            }).catch(e=>{
+              console.log(e);
+              
+            }
+            )
+            }
+
+
+            // Change lock name
+              
+            
+            Changelockname(){
+                this.apiService.Changelockname().toPromise().then(r=>{
+                  // const o = r as any;
+                  console.log(r);
+                  // this.apiService.accessToken=o.access_token;
+                }).catch(e=>{
+                  console.log(e);
+                  
+                }
+                )
+                }
+      // Change the super passcode
+
+      Changethesuperpasscode(){
+        this.apiService.Changethesuperpasscode().toPromise().then(r=>{
+          // const o = r as any;
+          console.log(r);
+          // this.apiService.accessToken=o.access_token;
+        }).catch(e=>{
+          console.log(e);
+          
+        }
+        )
+        }
+
+        // Transfer Lock
+
+        TransferLock(){
+          this.apiService.TransferLock().toPromise().then(r=>{
+            // const o = r as any;
+            console.log(r);
+            // this.apiService.accessToken=o.access_token;
+          }).catch(e=>{
+            console.log(e);
+            
+          }
+          )
+        }
+
+
+
+        // Send ekey
+        Sendekey(){
+          this.apiService.Sendekey().toPromise().then(r=>{
+            // const o = r as any;
+            console.log(r);
+            // this.apiService.accessToken=o.access_token;
+          }).catch(e=>{
+            console.log(e);
+            
+          }
+          )
+        }
+
+        // Get the eKey list of an account
+        GettheeKeylistofanaccount(){
+          
+            this.apiService.GettheeKeylistofanaccount().toPromise().then(r=>{
+              // const o = r as any;
+              console.log(r);
+              // this.apiService.accessToken=o.access_token;
+            }).catch(e=>{
+              console.log(e);
+              
+            }
+            )
+          }
+        
 }
 
 
