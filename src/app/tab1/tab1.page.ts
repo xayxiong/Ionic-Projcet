@@ -249,6 +249,15 @@ export class Tab1Page {
             }
             )
           }
+
+
+    checkRESTAPI(){
+      this.apiService.testRESTAPI().toPromise().then(r=>{
+        console.log(r)
+      }).catch(e=>{
+        console.log(e);
+      })
+    }
         
 }
 

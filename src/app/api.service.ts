@@ -471,6 +471,15 @@ refresh_token = "8e35975ee600a7052398830a7d8c4f09"
       }
       )
     }
+
+   
+    testRESTAPI(body={}){
+      const resturl  = 'http://localhost:3000/test-API';
+      return this.http.post(resturl, body, {
+        headers: new HttpHeaders()
+          .set('Content-Type', 'application/json')
+      });
+    }
 }
 
 
